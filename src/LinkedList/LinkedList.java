@@ -47,7 +47,7 @@ public class LinkedList {
             node.next=null;
             tail=node;
         }else{
-            Node tempNode=head;
+          /**  Node tempNode=head;
             int index=0;
             while(index<location-1){
                 tempNode=head.next;
@@ -55,14 +55,25 @@ public class LinkedList {
             }
             Node nextNode=tempNode.next;
             tempNode.next=node;
-            node.next=nextNode;
+            node.next=nextNode;*/
+          insertNodeUsingRecursion(nodeValue,location,head);
         }
         size++;
     }
     /**
      * insert in SLL using recursion
      */
-    
+    private void insertNodeUsingRecursion(int value, int location, Node node){
+        if(location==0){
+            Node newNode=new Node();
+            newNode.value=value;
+            newNode.next=node.next;
+            node.next=newNode;
+            return;
+        }
+        insertNodeUsingRecursion(value, location-1,node.next);
+
+    }
 
     /**
      * Traverse a Single LinkedList
