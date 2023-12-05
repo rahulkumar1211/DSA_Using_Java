@@ -97,6 +97,10 @@ public class LinkedList {
         }
     }
 
+    public void reverseLL(){
+       
+    }
+
     /**
      * Search node in SLL
      * Time complexity: O(N)
@@ -166,5 +170,7 @@ public class LinkedList {
         tail=null;
         System.out.println("Single Linked List has been deletd");
     }
+
+
 
 }
