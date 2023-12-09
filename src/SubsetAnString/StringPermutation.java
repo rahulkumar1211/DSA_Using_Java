@@ -4,9 +4,9 @@ import java.util.List;
 
 public class StringPermutation {
     public static void main(String[] args) {
-        //printPermutation("","abc");
+        printPermutation("","abc");
        // System.out.println(printPermutationList("","abc"));
-        System.out.println(printPermutationCount("","abcd"));
+       // System.out.println(printPermutationCount("","abcd"));
 
     }
 
@@ -17,8 +17,8 @@ public class StringPermutation {
         }
         char ch=up.charAt(0);
         for(int i=0;i<=p.length();i++){
-            String first=p.substring(0,i);
-            String second=p.substring(i,p.length());
+            String first=p.substring(0,i);//i.e. empty string
+            String second=p.substring(i,p.length());//i.e whole string
             printPermutation(first+ch+second,up.substring(1));
         }
     }
